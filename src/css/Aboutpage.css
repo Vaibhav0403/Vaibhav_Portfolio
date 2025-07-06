@@ -1,0 +1,143 @@
+/* src/pages/AboutPage.css */
+
+.about-page {
+  padding: 60px 20px;
+  max-width: 1800px;
+  margin: 0 auto;
+  border-radius: 10px;
+ 
+  
+}
+
+.about-hero {
+  text-align: center;
+   padding-top:40px;
+}
+
+.about-profile-picture {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #007bff; /* Primary color border */
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  margin-bottom: 25px;
+}
+
+.about-hero h1 {
+  font-size: 3.5em;
+  margin-bottom: 10px;
+  color: #212529;
+}
+
+.about-hero .tagline {
+  font-size: 1.4em;
+  color: #6c757d;
+  font-weight: 300;
+}
+
+.about-content {
+  line-height: 1.8;
+  color: #495057;
+}
+
+.bio-summary {
+  font-size: 1.1em;
+  text-align: justify;
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+
+.experience-section,
+.skills-section,
+.additional-info {
+  margin-bottom: 40px;
+  padding: 25px;
+  background-color: #f8f9fa; /* Light background for sections */
+  border-radius: 8px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05); /* Subtle inner shadow */
+}
+
+.experience-section h2,
+.skills-section h2,
+.additional-info h2 {
+  color: #007bff;
+  font-size: 2em;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 10px;
+}
+
+.skills-section .skill-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.skill-category {
+  flex: 1;
+  min-width: 250px; /* Ensure columns don't get too narrow */
+  max-width: 48%; /* Two columns per row */
+}
+
+.skill-category h3 {
+  font-size: 1.4em;
+  color: #343a40;
+  margin-bottom: 10px;
+}
+
+.skill-category ul {
+  list-style: square; /* Different list style */
+  margin-left: 20px;
+}
+
+.skill-category li {
+  margin-bottom: 5px;
+  font-size: 0.95em;
+}
+
+.contact-cta {
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 1px solid #e9ecef;
+}
+
+.contact-cta p {
+  font-size: 1.2em;
+  margin-bottom: 25px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 2.8em;
+  }
+  .about-hero .tagline {
+    font-size: 1.2em;
+  }
+  .skills-section .skill-categories {
+    flex-direction: column; /* Stack skill categories */
+  }
+  .skill-category {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero h1 {
+    font-size: 2.2em;
+  }
+  .about-hero .tagline {
+    font-size: 1em;
+  }
+  .about-page {
+    padding: 40px 15px;
+  }
+  .experience-section,
+  .skills-section,
+  .additional-info {
+    padding: 15px;
+  }
+}

@@ -1,0 +1,140 @@
+/* src/pages/HomePage.css */
+
+.home-page {
+  text-align: center;
+  padding: 80px 20px; /* More padding for a prominent hero section */
+  border-radius: 10px; /* Rounded corners for the section */
+  
+  
+}
+
+.hero-section {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+  padding-top:40px;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Circular image */
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-bottom: 25px;
+}
+
+.hero-title {
+  font-size: 4em;
+  margin-bottom: 15px;
+  color: #212529;
+  line-height: 1.1;
+}
+
+.hero-tagline {
+  font-size: 1.8em;
+  color: #495057;
+  margin-bottom: 25px;
+  font-weight: 300;
+}
+
+.highlight {
+  color: #007bff; /* Primary brand color highlight */
+  font-weight: 600;
+}
+
+.hero-description {
+  font-size: 1.1em;
+  color: #6c757d;
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between buttons */
+}
+
+/* Intro sections below hero */
+.intro-sections {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
+  flex-wrap: wrap; /* Allow cards to wrap */
+}
+
+.intro-card {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+  flex: 1; /* Allow cards to grow */
+  min-width: 280px; /* Minimum width before wrapping */
+  max-width: 45%; /* Max width for two columns */
+  text-align: left;
+}
+
+.intro-card h3 {
+  color: #007bff;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+}
+
+.intro-card ul {
+  list-style: disc;
+  margin-left: 20px;
+  font-size: 0.95em;
+  color: #495057;
+}
+
+.intro-card li {
+  margin-bottom: 8px;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 3.2em;
+  }
+  .hero-tagline {
+    font-size: 1.5em;
+  }
+  .intro-card {
+    max-width: 100%; /* Stack cards on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .home-page {
+    padding: 60px 15px;
+  }
+  .hero-title {
+    font-size: 2.5em;
+  }
+  .hero-tagline {
+    font-size: 1.3em;
+  }
+  .cta-buttons {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2em;
+  }
+  .hero-tagline {
+    font-size: 1.1em;
+  }
+  .intro-card {
+    padding: 20px;
+  }
+  .intro-card h3 {
+    font-size: 1.3em;
+  }
+}

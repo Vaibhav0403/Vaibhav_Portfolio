@@ -1,0 +1,77 @@
+/* src/App.css */
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #343a40; /* Dark background */
+  padding: 25px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  width: 100%;
+  position:fixed;
+  font-family:"Comic Sans MS";
+  font-size:20px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center; /* Center links */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+nav a {
+  color: #f8f9fa; /* Light text for links */
+  text-decoration: none;
+  font-weight: 500;
+  padding: 5px 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #1e1e1f; /* Underline color */
+  left: 50%;
+  bottom: -5px;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+nav a:hover::after,
+nav a.active::after { /* Add active class for current page highlight */
+  width: 100%;
+  left: 0;
+}
+
+nav a:hover,
+nav a.active {
+  color: #007bff; /* Highlight on hover/active */
+}
+
+/* Main content area */
+.App > section {
+  flex-grow: 1; /* Allows main content to take available space */
+}
+
+/* Responsive navigation */
+@media (max-width: 768px) {
+  nav ul {
+    flex-wrap: wrap; /* Wrap links on smaller screens */
+    justify-content: center;
+  }
+  nav li {
+    margin: 10px 10px;
+  }
+}

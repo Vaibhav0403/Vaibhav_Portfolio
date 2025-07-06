@@ -1,0 +1,193 @@
+/* src/pages/ProjectDetailPage.css */
+
+.project-detail-page {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  line-height: 1.8;
+  color: #495057;
+}
+
+.back-to-projects {
+  display: inline-block;
+  margin-bottom: 30px;
+  font-size: 1.1em;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: transform 0.2s ease;
+}
+
+.back-to-projects:hover {
+  transform: translateX(-5px);
+  text-decoration: underline;
+}
+
+.project-detail-page h1 {
+  font-size: 3em;
+  color: #212529;
+  margin-bottom: 10px;
+}
+
+.project-detail-category {
+  font-size: 1.1em;
+  color: #6c757d;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+.btn-live-demo,
+.btn-github-repo {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-right: 15px;
+  margin-bottom: 25px;
+}
+
+.btn-live-demo {
+  background-color: #28a745; /* Green */
+  color: #fff;
+}
+
+.btn-live-demo:hover {
+  background-color: #218838;
+}
+
+.btn-github-repo {
+  background-color: #333; /* Dark */
+  color: #fff;
+}
+
+.btn-github-repo:hover {
+  background-color: #000;
+}
+
+.project-overview,
+.technologies-used,
+.project-screenshots,
+.project-challenges,
+.project-impact,
+.project-lessons {
+  margin-bottom: 40px;
+  padding: 25px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.project-detail-page h2 {
+  font-size: 2.2em;
+  color: #007bff;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 10px;
+}
+
+.project-detail-page h3 {
+  font-size: 1.6em;
+  color: #343a40;
+  margin-bottom: 15px;
+}
+
+.technologies-used .tech-pills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.technologies-used .tech-pill {
+  background-color: #e9ecef;
+  color: #495057;
+  padding: 7px 15px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.project-screenshots .screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.project-screenshots img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  object-fit: cover;
+}
+
+.project-challenges ul,
+.project-impact ul {
+  list-style: none; /* No default bullet */
+  padding: 0;
+}
+
+.project-challenges li,
+.project-impact li {
+  margin-bottom: 10px;
+  padding-left: 25px; /* Indent text */
+  position: relative;
+  font-size: 1em;
+}
+
+.project-challenges li::before,
+.project-impact li::before {
+  content: '✔'; /* Custom bullet point */
+  color: #28a745; /* Green checkmark */
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .project-detail-page h1 {
+    font-size: 2.5em;
+  }
+  .project-detail-page h2 {
+    font-size: 1.8em;
+  }
+  .project-detail-page h3 {
+    font-size: 1.4em;
+  }
+  .btn-live-demo,
+  .btn-github-repo {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  .screenshot-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-detail-page h1 {
+    font-size: 2em;
+  }
+  .project-detail-category {
+    font-size: 0.9em;
+  }
+  .project-detail-page {
+    padding: 30px 15px;
+  }
+  .project-overview,
+  .technologies-used,
+  .project-screenshots,
+  .project-challenges,
+  .project-impact,
+  .project-lessons {
+    padding: 15px;
+  }
+}

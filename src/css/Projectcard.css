@@ -1,0 +1,168 @@
+
+.project-card {
+  background-color: #fff;
+  border-radius: 12px; /* More rounded corners for cards */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* Stronger shadow */
+  overflow: hidden; /* Hide overflowing images */
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  transform: translateY(-8px); /* Lift effect on hover */
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15); /* More prominent shadow on hover */
+}
+
+.project-thumbnail {
+  width: 100%;
+  height: 200px; /* Fixed height for thumbnails */
+  object-fit: cover; /* Cover the area, crop if necessary */
+  border-bottom: 1px solid #eee;
+}
+
+.project-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Allow info section to take available height */
+}
+
+.project-title {
+  font-size: 1.6em;
+  color: #007bff; /* Primary color for title */
+  margin-bottom: 10px;
+}
+
+.project-category {
+  font-size: 0.9em;
+  color: #6c757d;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.project-description {
+  font-size: 1em;
+  color: #495057;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1; /* Allows description to push buttons to bottom */
+}
+
+.project-tech-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px; /* Space between tech pills */
+  margin-bottom: 20px;
+}
+
+.tech-pill {
+  background-color: #e9ecef; /* Light gray background */
+  color: #495057;
+  padding: 5px 10px;
+  border-radius: 20px; /* Very rounded pills */
+  font-size: 0.8em;
+  font-weight: 500;
+  white-space: nowrap; /* Prevent breaking into multiple lines */
+}
+
+.btn-group {
+    display: flex;
+    gap: 15px; /* Space between buttons */
+    margin-top: 50px; /* Space from content above */
+    justify-content: center; /* Center the buttons within the group */
+    width: fit-content; /* Make the group only as wide as its content */
+    margin-left: auto; /* Center the group horizontally within its parent */
+    margin-right: 50px; /* Center the group horizontally within its parent */
+}
+
+.btn-details,
+.btn-github,
+.btn-demo {
+    /* Removed 'display: block;' and 'width: 100%;' as 'flex: 1' handles sizing within flex container */
+    flex: 1; /* Buttons take equal width within the button group */
+    text-align: center;
+    padding: 14px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.3s ease, color 0.3s ease,
+                border-color 0.3s ease, transform 0.2s ease,
+                text-shadow 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow to transition */
+    border: 1px solid transparent;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle initial shadow */
+    margin-top:10px;
+}
+
+/* Pseudo-element for a subtle "shine" effect on buttons */
+.btn-details::before,
+.btn-github::before,
+.btn-demo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.15); /* Light shine */
+    transform: skewX(-20deg);
+    transition: left 0.5s ease;
+}
+
+.btn-details:hover::before,
+.btn-github:hover::before,
+.btn-demo:hover::before {
+    left: 100%; /* Move shine across button */
+}
+
+.btn-details {
+  background-color: #007bff;
+  color: #fff;
+}
+.btn-details:hover {
+  background-color: #0056b3;
+}
+
+.btn-github {
+  background-color: #333; /* Dark for GitHub */
+  color: #fff;
+}
+.btn-github:hover {
+  background-color: #000;
+}
+
+.btn-demo {
+  background-color: #28a745; /* Green for demo */
+  color: #fff;
+}
+.btn-demo:hover {
+  background-color: #218838;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .project-card {
+    border-radius: 8px;
+  }
+  .project-thumbnail {
+    height: 180px;
+  }
+  .project-info {
+    padding: 15px;
+  }
+  .project-title {
+    font-size: 1.4em;
+  }
+  .project-description {
+    font-size: 0.95em;
+  }
+  .btn-details,
+  .btn-github,
+  .btn-demo {
+    padding: 10px 12px;
+    font-size: 0.9em;
+  }
+}
